@@ -94,7 +94,7 @@ public class PointerAction : MonoBehaviour
             colorPicker.changeModelColor();
             colorIsChanged = false;
 
-            Debug.Log("Update - Color: " + currentColor + "; PointerPos: " + pointerPos);
+            //Debug.Log("Update - Color: " + currentColor + "; PointerPos: " + pointerPos);
         }
     }
 
@@ -193,7 +193,7 @@ public class PointerAction : MonoBehaviour
     public void setColor(Color color)
     {
         currentColor = color;
-        Debug.Log("SetColor - Color: " + color);
+        //Debug.Log("SetColor - Color: " + color);
 
         double M = Mathf.Max(color.r, color.g, color.b);
         double m = Mathf.Min(color.r, color.g, color.b);
@@ -236,6 +236,8 @@ public class PointerAction : MonoBehaviour
 
             if (pointerPosY < minPos)
                 pointerPosY += maxPos * 2;
+
+            //Debug.Log("SetColor - PointerPos: (" + pointerPosX + ", " + pointerPosY + ")");
 
             setPointerPosition(new Vector2(pointerPosX, pointerPosY));
         }
